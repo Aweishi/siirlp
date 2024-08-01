@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+
+.gradient-type{
+    line-height:1.3;
+    color: transparent; /* 文字顏色設定透明 */
+    background-image: linear-gradient(180deg, #FD1CE0, #FF72AB); /* 設定漸層角度及顏色 */
+    -webkit-background-clip: text; /* 背景裁剪成文字的前景色 */
+    background-clip: text;
+
+}
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+  }
+  
+
+ .body {
+    display: table;
+    width: 100%;
+    height: 100%;
+    background-color: #171717;
+    color: #000;
+    line-height: 1.6;
+    position: relative;
+    overflow:hidden;
+
+  }
+  
+  .lines {
+    z-index:-1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    margin: auto;
+    width: 90vw;
+  }
+  
+  .line {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+  }
+  
+  .line::after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 15vh;
+    width: 100%;
+    top: -50%;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+    animation: drop 7s 0s infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+  }
+  
+  .line:nth-child(1) {
+    margin-left: -25%;
+  }
+  
+  .line:nth-child(1)::after {
+    animation-delay: 2s;
+  }
+  
+  .line:nth-child(3) {
+    margin-left: 25%;
+  }
+  
+  .line:nth-child(3)::after {
+    animation-delay: 2.5s;
+  }
+  
+  @keyframes drop {
+    0% {
+      top: -50%;
+    }
+    100% {
+      top: 110%;
+    }
+  }
+   */
+
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+  }
+  
+  html, body {
+    height: 100%;
+  }
+  
+  body {
+    font-family: "Nunito Sans", sans-serif;
+    width: 100%;
+    height: 100%;
+    /* background-color: #171717; */
+  }
+  
+  .content-section {
+    position: relative;
+    padding-bottom: 250px;
+    width: 100%;
+    /* height: 80vh; */
+    margin: auto;
+    background-color: #03012D; /* 方便區分section */
+    background-image: url('/assets/images/bg-circle02.png'); /* 替換為你的背景圖片路徑 */
+    background-size: 110%; /* 根據需要調整背景圖片樣式 */
+   background-position: right 50% top 15%;
+    background-blend-mode:screen;
+    background-repeat: no-repeat;
+  
+  }
+
+
+  .iframe-container{
+    position: absolute;
+    top:100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 480px; /* 可以根据需要调整高度 */
+    z-index: 1000;
+  }
+
+
+
+  .iframe-container iframe{
+    width: 100%;
+    height: 100%;
+    border: none; /* 移除默认的边框 */
+    z-index: 1000;
+  }
+
+
+
+  
+
+  @media screen and (min-width: 1024px) {
+    .main-section{
+      margin-top:384px;
+    }
+  }
+
+
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .main-section{
+      margin-top:272px;
+    }
+    .content-section{
+      padding-bottom:150px;
+      background-size: 190%; /* 根據需要調整背景圖片樣式 */
+      background-position: right 50% top 15%;
+    }
+
+    .iframe-container{
+      width: 80%;
+      height: 430px; /* 可以根据需要调整高度 */
+      z-index: 1000;
+    }
+
+
+  }
+
+  @media screen and (min-width: 480px) and (max-width:768px){
+
+    .main-section{
+      margin-top:272px;
+    }
+    .content-section{
+      padding-bottom:150px;
+      background-size: 190%; /* 根據需要調整背景圖片樣式 */
+      background-position: right 50% top 15%;
+    }
+
+
+    .iframe-container{
+      width: 90%;
+      /* height:250px; */
+    }
+    .iframe-container iframe{
+      width: 90%;
+      height: 100%;
+
+    }
+  }
+
+  @media screen and (max-width:480px){
+    .main-section{
+      margin-top:240px;
+    }
+
+    .content-section{
+      padding-bottom:100px;
+      background-size: 180%; /* 根據需要調整背景圖片樣式 */
+      background-position: right 50% top -10%;
+    }
+    .iframe-container{
+      width: 100%;
+      height:210px;
+      margin-bottom:144px;
+    }
+    .iframe-container iframe{
+      width: 100%;
+      height: 100%;
+
+    }
+
+
+  }
+
+
+  
+  .lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+  }
+  
+  .line {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    overflow: hidden;
+  }
+  
+  .line::after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 15vh;
+    width: 100%;
+    top: -50%;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+    animation: drop 7s 0s infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+  }
+  
+  .line:nth-child(1) {
+    margin-left: -30%;
+  }
+  
+  .line:nth-child(1)::after {
+    animation-delay: 2s;
+  }
+  
+  .line:nth-child(2) {
+    margin-left: -15%;
+  }
+  
+  .line:nth-child(3)::after {
+    animation-delay: 2.5s;
+  }
+  
+  .line:nth-child(4) {
+    margin-left: 15%;
+  }
+  
+  .line:nth-child(4)::after {
+    animation-delay: 3s;
+  }
+  
+    .line:nth-child(5) {
+    margin-left: 30%;
+  }
+  
+  .line:nth-child(5)::after {
+    animation-delay: 3.5s;
+  }
+
+  @keyframes drop {
+    0% {
+      top: -50%;
+    }
+    100% {
+      top: 110%;
+    }
+  }
+
+  @keyframes moveBackground {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg)
+  }
+  100% {
+    transform: rotate(360deg)
+  }
+}
+  
